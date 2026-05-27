@@ -24,12 +24,12 @@
                 = <&bt BT_CLR>;
         )
 
-        ZMK_MACRO(emoji_picker,
-            display-name = "Emoji Picker";
+        ZMK_MACRO(input_source_switch,
+            display-name = "Input Source Switch";
             bindings
-                = <&macro_press &kp LCTRL &kp LGUI>
+                = <&macro_press &kp LCTRL>
 			    , <&macro_tap &kp SPACE>
-			    , <&macro_release &kp LCTRL &kp LGUI>;
+			    , <&macro_release &kp LCTRL>;
         )
 	};
 };
@@ -67,7 +67,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
-			bindings = <&mo>, <&emoji_picker>;  // Hold: momentary layer, Tap: Emoji Picker
+			bindings = <&mo>, <&input_source_switch>;
 		};
 		enter_cmd: enter_cmd {
 			compatible = "zmk,behavior-mod-morph";
