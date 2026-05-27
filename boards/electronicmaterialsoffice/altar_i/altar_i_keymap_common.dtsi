@@ -26,9 +26,11 @@
 
         ZMK_MACRO(input_source_switch,
             display-name = "Input Source Switch";
+            wait-ms = <100>;
             bindings
                 = <&macro_press &kp LCTRL>
 			    , <&macro_tap &kp SPACE>
+			    , <&macro_pause_for_release>
 			    , <&macro_release &kp LCTRL>;
         )
 	};
